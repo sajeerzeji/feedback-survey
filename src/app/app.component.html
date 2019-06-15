@@ -1,12 +1,22 @@
-<h1>
+<!-- <h1>
   {{ title }}
-</h1>
+</h1> -->
 
-<h1>Survey</h1>
-<survey [json]="json" (submitSurvey)="sendData($event)"></survey>
+<div class="customer-name v-center">
+  <h1>Hello {{ customerName }}</h1>
+</div>
 
-<h1>Survey JS Creator</h1>
+<div class="feedback-option v-center">
+  <img width="70" height ="70" src="{{feedBackImage}}">
+  <p>{{feedBackCaption}}</p>
+</div>
+
+<div class="survey-section v-center">
+  <survey [json]="json" (submitSurvey)="sendData($event)"></survey>
+</div>
+
+<!-- <h1>Survey JS Creator</h1>
 <survey-creator
   [json]="json"
   (surveySaved)="onSurveySaved($event)"
-></survey-creator>
+></survey-creator> -->

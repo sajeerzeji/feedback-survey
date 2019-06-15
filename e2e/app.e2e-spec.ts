@@ -1,10 +1,10 @@
-import { SurveyjsAngularCliPage } from './app.po';
+import { FeedBackSurvey } from './app.po';
 
 describe('surveyjs-angular-cli App', () => {
-  let page: SurveyjsAngularCliPage;
+  let page: FeedBackSurvey;
 
   beforeEach(() => {
-    page = new SurveyjsAngularCliPage();
+    page = new FeedBackSurvey();
   });
 
   it('should display message saying app works', () => {

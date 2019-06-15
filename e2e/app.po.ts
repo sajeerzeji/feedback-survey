@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class SurveyjsAngularCliPage {
+export class FeedBackSurvey {
   navigateTo() {
     return browser.get('/');
   }

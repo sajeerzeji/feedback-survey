@@ -39,6 +39,11 @@ export class SurveyComponent implements OnInit {
   }
 
   ngOnInit() {
+    var defaultThemeColors = Survey.StylesManager.ThemeColors["default"];
+    defaultThemeColors["$main-color"] = "#3282b4";
+    defaultThemeColors["$main-hover-color"] = "#215677";
+    Survey.StylesManager.applyTheme();
+
     const surveyModel = new Survey.Model(this.json);
     surveyModel.onAfterRenderQuestion.add((survey, options) => {
       if (!options.question.popupdescription) { return; }
