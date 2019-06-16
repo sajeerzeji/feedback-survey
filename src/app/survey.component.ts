@@ -63,10 +63,14 @@ export class SurveyComponent implements OnInit {
       header.appendChild(span);
       header.appendChild(btn);
     });
+    // surveyModel.onComplete
+    //   .add(result =>
+    //     this.submitSurvey.emit(result.data)
+    //   );
     surveyModel.onComplete
-      .add(result =>
-        this.submitSurvey.emit(result.data)
-      );
+      .add(function(result) {
+        console.log(JSON.stringify(result.data, null, 3));
+      });
     Survey.SurveyNG.render('surveyElement', { model: surveyModel });
   }
 }

@@ -35,7 +35,8 @@ export class AppComponent {
         "name": "question1",
         "title": "Enter your phone",
         "popupdescription": "Some text",
-        "inputMask": "phone"
+        "inputMask": "phone",
+        "isRequired": true
        }
       ]
      },
@@ -61,7 +62,8 @@ export class AppComponent {
           "text": "Product"
          }
         ],
-        "otherText": "Vendor"
+        "otherText": "Vendor",
+        "isRequired": true
        }
       ]
      },
@@ -81,7 +83,8 @@ export class AppComponent {
           "value": "item2",
           "text": "No"
          }
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -103,7 +106,8 @@ export class AppComponent {
           "text": "Maybe"
          }
         ],
-        "otherText": "No"
+        "otherText": "No",
+        "isRequired": true
        }
       ]
      },
@@ -113,7 +117,8 @@ export class AppComponent {
        {
         "type": "comment",
         "name": "question5",
-        "title": "Review your experience with us."
+        "title": "Review your experience with us.",
+        "isRequired": true
        }
       ]
      },
@@ -124,7 +129,8 @@ export class AppComponent {
         "type": "rating",
         "name": "question6",
         "title": "How will you rate the product quality?",
-        "rateMax": 10
+        "rateMax": 10,
+        "isRequired": true
        }
       ]
      },
@@ -144,7 +150,8 @@ export class AppComponent {
           "value": "giraffe",
           "imageLink": "https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg"
          }
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -164,7 +171,8 @@ export class AppComponent {
          "I like the quality",
          "I like the vendor",
          "I like the packing"
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -174,7 +182,8 @@ export class AppComponent {
        {
         "type": "boolean",
         "name": "question8",
-        "title": "Did you meet your expectations?"
+        "title": "Did you meet your expectations?",
+        "isRequired": true
        }
       ]
      },
@@ -192,7 +201,8 @@ export class AppComponent {
          {
           "name": "Item 2"
          }
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -209,7 +219,8 @@ export class AppComponent {
          3,
          4,
          5
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -221,7 +232,8 @@ export class AppComponent {
         "name": "question12",
         "title": "Schedule your next purchase date"
        }
-      ]
+      ],
+      "isRequired": true
      },
      {
       "name": "page14",
@@ -233,7 +245,8 @@ export class AppComponent {
          "Service",
          "Products",
          "Price"
-        ]
+        ],
+        "isRequired": true
        }
       ]
      },
@@ -247,30 +260,28 @@ export class AppComponent {
          "Service",
          "Products",
          "Price"
-        ]
-       }
-      ]
-     },
-     {
-      "name": "page16",
-      "elements": [
-       {
-        "type": "editor",
-        "name": "Please give us your suggestions.",
-        "valueName": "Please give us your suggestions"
+        ],
+        "isRequired": true
        }
       ]
      }
     ],
-    "showProgressBar": "bottom"
+    "showProgressBar": "bottom",
+    "completedHtml": 
+      '<div class="v-center">' +
+        '<p><h4>Thank you for your Feedback, Please do visit us again</h4></p>' +
+        '<span class="icon">' +
+          '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANlSURBVHhe7ZpZyE5BGMc/ZElJubAUIrsiSxE34kJCIkqJSKIkRYlkiewlWVKkXEkickPKlnDpQnGFbBcS2WXn9y9PTdN5P6+8Z8405le/vu995nTOPE9nmTNzmjKZTCaTyWQy1dMLl+BqXIg98L+gDR7E7/jT8Svuw3aYLC3wNLqJ+55FbZckc9FN9jruwEtOTGq7JFHCluRhBRz2oLVdUyA1WuEntCR7oksXtLZ3CqRGH7QEXyjg0R6t/Y0CqTEVLUFdCj5D0drvKJAa69ESPKCAx2y09jMKpIaSsgQ18PHZhta+SYGUaIu6sVmCg9HnHFr7DAVSYiJacvcU8NAT4iXaNr0xKU6gJafnvc9otPZHCqREN/yClqDu9j4b0doPKZASe9GSu6pAAXrs2TbTFUgFDX4+oyU3DX2GobVrAKQBURLoje4CWnK1xve70LY5qkAqLEdL7BuOQp+W+Bhtu+OoCZJaLsL+GD0T0D319cpbhHv3/xsvYrSFGIDP0Tp7CzULVMQQ/IFucvWqccNIjArd0J6hdVL/d8fmGI9bUWfJn9Ql8hFt/xozdMQomIyv0Dr3HnWKN5qB+ATtOGuxUnS334zuJKcKMRbLQmMFO5YusUpZgNYZ+RSHY5m0Rs0i63gfFGgUeia7w9Yi72M/NOahtV3Gzlg2enmyM+6tAo1C1bRkmnMdGroE5qNmctWxEOh12vpyV4FGoTut+/yu5XasEnf26KQCIViDsRRgC1pfNigQgpgKoNUj60uwt8eYCvAArS/BZo9iKUAHtOGzngDB1hFjKcAYtH7cVCAUsRRgMVo/gk6fxVKA/Wj9WKZAKGIpgGaWrB/jFAhFLAV4jdaPTgqEIoYCaEnd+qCXrqDEUIApaH04r0BIYihApX2IoQDH0PowR4GQxFCA22h90IRqUKougGaBbLJGf/U7KFUXYATa8XUmBKfqAuxGO/4RBUJTqwBazNTvnTjp9+9GMwu1vGbH1+OwFLTctAqL1uX03C0qwAq0uNS3gDdQU1Uat2vGpmh/9ajjXEF3/9p3aa/AmvF1D1ZLtwD+569l+hBL/aq83gL43/JqVUjPaPc7n0aqCZBT2BVLRfP9+p7PX5NzVfJa1i5Cp+YgnIkrUZOXRfuoV306txT7YiaTyWQy/0RT0y8agchU4je1WQAAAABJRU5ErkJggg==">' +
+        '</span>' +
+      '</div>'
    };
 
   onSurveySaved(survey) {
+    console.log(survey);
     this.json = survey;
   }
 
-  sendData(result) {
-    //TODO update with your own behavior    
+  sendData(result) { 
     console.log(result);
   }
 }
